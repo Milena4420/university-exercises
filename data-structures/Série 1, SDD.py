@@ -42,7 +42,6 @@ assert not gcd(14,14) == 34
 # ### Explications
 
 # C'est une fonction qui prend 2 entiers en entrée et qui en retourne un, qui sera leur PGDC. On initie result à 0 et on implémente une boucle while: tant que m ne vaut pas 0, n devient m et m devient le reste de la division euclidienne de n par m. La fonction nous renvoie result=n lorsqu'un nombre a été trouvé, 0 s'il n'y en a aucun.
-# CONTRIBUTION: MILENA=100%
 
 # ## Exercice 2
 # Implémentez une manière de calculer $x^n$ en utilisant la méthode de dichotomie.
@@ -82,7 +81,7 @@ assert not powdi(3,3) == 10
 # lorsque n=1: x^1=x donc on retourne x
 # lorsque n est pair: on fait 2 appels récursifs avec x^(n/2) car x^n = x^(n/2)* x^(n/2) 
 # lorsque n est impair: on fait 2 appels récursifs avec x^(n//2) car x^n = x* x^(n//2)* x^(n//2)
-# CONTRIBUTION: MILENA = 100%
+
 
 # ## Exercice 3
 # La suite de Fibonacci est une suite de nombres entiers dans laquelle chaque nombre $f_{n+2}$ correspond à la somme des deux nombres qui le précèdent, $f_{n+1}+f_{n}$.
@@ -145,7 +144,7 @@ assert not fibo(5) == 10
 # Avec le résultat du point 3.1.1, on peut comprendre que pour avoir le n-ième terme de la suite de Fibonnacci, on calcule la matrice A^n avec A [[0,1], [1,1]] puis on effectue la multiplication matricielle par la droite de A^n par le vecteur [f0, f1] = [0, 1].
 # On obtient ainsi le vecteur [fn, fn+1] = A^n [f0, f1], comme on l'a démontré au point 3.1.2
 # alors il suffit de renvoyer la première coordonnée de ce vecteur, qui est fn.
-# CONTRIBUTION: SHAM=100%
+
 
 # ### Exercice 3.1
 # $(1)$ Montrez qu'il existe une matrice $A$ reliant $\left[\begin{array}{c}
@@ -179,7 +178,7 @@ assert not fibo(5) == 10
 # Par hypothèse, A [fn, fn+1] = A A^n [f0, f1] = A^(n+1) [f0, f1]
 # Donc [fn+1, fn+2] = A^(n+1) [f0, f1]
 # Donc par induction, on a montré que tout entier naturel n, on a [fn, fn+1] = A^n [f0, f1] 
-# CONTRIBUTION: SHAM=100%
+
 
 # ### Exercice 3.2 - (<font color='#db60cf'>Bonus</font>) Une formule analytique pour $f_n$
 # Que peut-on dire de $A$ ? Déterminez ses valeurs propres et ses sous-espaces propres associés.
@@ -190,7 +189,7 @@ assert not fibo(5) == 10
 # Pour trouver l'espace propre Ek1 associé à k1, on trouve l'ensemble des points [x,y] appartenant à R^2 tel que A [x,y] = k1 [x,y]
 # on trouve Ek1 ={[x, k1 x] appartenant à R^2}
 # De manière similaire, on trouve l'espace propre associé à k2: Ek2 = {[x, k2 x] appartenant dans R^2}
-# CONTRIBUTION: SHAM=100%
+
 
 # En utilisant $(2)$, en déduire une forme analytique de $f_n$.
 
@@ -206,7 +205,7 @@ assert not fibo(5) == 10
 # Donc [fn, fn+1] = A^n [f0, f1] = 1/(k1-k2) [k1^(n+1) - k2^(n+1), k1^(n+2) - k2^(n+2)]
 # => fn = (k1^(n+1) - k2^(n+1))/(k1 - k2) 
 # ainsi, on obtient notre forme analytique de fn
-# CONTRIBUTION: SHAM=100%
+
 
 # ## Exercice 4
 # Implémentez et testez les 3 versions de l'algorithme calculant la sous-suite de somme maximale, c'est-à-dire:
@@ -289,7 +288,7 @@ assert not maxSub1([4,3,-10,2,8]) == -10
 # maxSub2 mémorise certaines valeurs: on prend une sous-suite, puis on lui rajoute un élément à chaque fois.
 # maxSub3 ne parcoure qu'une seule fois la liste et ne prend pas en compte les sous-listes qui donne un score négatif.
 # Comme vu en cours, l'exercice permet de se rendre compte qu'il existe plusieurs "méthodes" pour résoudre un problème et que certaines demandent plus de temps que d'autres. Plus il y a de boucles, plus cela prend du temps à l'ordinateur. 
-# CONTRIBUTION: 50-50
+
 
 # In[ ]:
 
